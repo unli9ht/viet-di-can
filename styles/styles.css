@@ -1,0 +1,255 @@
+/** RESETS START */
+
+/* Box sizing reset */
+html {
+    box-sizing  : border-box;
+    font-family : 'Open Sans', sans-serif;
+    color-scheme: dark light;
+}
+
+html *,
+html *:before,
+html *:after {
+    box-sizing: inherit;
+}
+
+/* Removes margins on all elements of body */
+body {
+    margin: 0;
+}
+
+/* Makes imgs not explode out of their containers */
+img {
+    max-width: 100%;
+    height   : auto;
+}
+
+/* Makes text not have margins at the top */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+/** Resets end **/
+
+/** BODY START **/
+
+body {
+    background-color: #090715;
+    color           : whitesmoke;
+    text-align      : center;
+    letter-spacing  : 1px;
+}
+
+/** Body end **/
+
+/** CONTAINER START **/
+
+.width {
+    margin: 0 5%;
+}
+
+/** FADE IN ANIMATION START **/
+
+.hidden {
+    opacity   : 0;
+    transition: all 3.5s;
+}
+
+.show {
+    opacity: 1;
+}
+
+/** Fade in animation end **/
+
+/** HERO-SECTION START **/
+.hero-section {
+    height                 : 100dvh;
+    position               : relative;
+    background-image       : url("../images/hero-mobile-1.jpg");
+    background-image       : url("../images/hero-all.jpg");
+    background-position    : center;
+    -o-background-size     : cover;
+    -moz-background-size   : cover;
+    -webkit-background-size: cover;
+    background-size        : cover;
+    background-repeat      : no-repeat;
+}
+
+.hero-text {
+    width      : 85%;
+    position   : absolute;
+    top        : 50%;
+    left       : 50%;
+    transform  : translate(-50%, -50%);
+    font-size  : 1.5rem;
+    color      : whitesmoke;
+    text-shadow: 1px 1px black;
+
+}
+
+.viet-di-can {
+    font-size: 4rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/** Hero-section end **/
+
+/** HERO-VIETNAMESE-SECTION START **/
+
+.future-flex-container {
+    margin: 15px 0;
+}
+
+/** Hero-vietnamese-section end **
+
+/** FUTURE-SECTION START **/
+
+.font-special {
+    color      : rgb(11, 169, 231);
+    font-weight: bolder;
+}
+
+.future-section {
+    padding   : 50px;
+    text-align: center;
+}
+
+.future-flex-container {
+    display        : flex;
+    justify-content: center;
+}
+
+.future-box {
+    width: 100%;
+}
+
+/** Future-section end **/
+
+/** VANCOUVER-SECTION START  **/
+
+.want-to-be {
+    padding         : 5%;
+    margin-top      : 3%;
+    background-color: steelblue;
+    color           : black;
+}
+
+.vancouver-flex-container-1 {
+    display        : flex;
+    justify-content: center;
+}
+
+.vancouver-box img {
+    padding: 3px;
+}
+
+.rank {
+    padding-top: 4%;
+}
+
+.accordion {
+    padding: 10px;
+}
+
+.accordion li {
+    list-style   : none;
+    width        : 100%;
+    padding      : 10px;
+    background   : #1f1e1e;
+    border       : 2px solid rgba(105, 105, 105, 0.473);
+    border-radius: 5px;
+}
+
+.accordion li label {
+    display    : flex;
+    align-items: center;
+    cursor     : pointer;
+}
+
+label::before {
+    content     : '+';
+    margin-right: 10px;
+    font-size   : 2em;
+    font-weight : 600;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .accordion-content {
+    max-height: 0;
+    overflow  : hidden;
+    transition: smooth max-height 0.35s;
+}
+
+.accordion input[type="radio"]:checked+label+.accordion-content {
+    max-height: 10000px;
+}
+
+.accordion input[type="radio"]:checked+label::before {
+    content: '-';
+}
+
+/** Vancouver-section end **/
+
+/** VELVET-SECTION START **/
+
+.velvet-section {
+    background-color: #b19167ce;
+}
+
+.velvet-portrait {
+    border: 3px solid white;
+    width : 300px;
+}
+
+.velvet-text {
+    color         : black;
+    padding-top   : 20px;
+    padding-bottom: 20px;
+    padding-left  : 50px;
+    padding-right : 50px;
+}
+
+footer {
+    padding-top   : 50px;
+    padding-bottom: 50px;
+    color         : grey;
+}
+
+/** Velvet-section end  **/
+
+/** MEDIA QUERIES **/
+
+@media (min-width: 1400px) {
+    .hero-vietnamese-section {
+        margin-top: 150px;
+    }
+
+
+    .future-flex-container {
+        padding: 25px 0;
+    }
+
+    .width {
+        padding: 0 18%;
+    }
+
+    .velvet-portrait {
+        width: 500px;
+    }
+
+    .velvet-text {
+        padding: 2% 20%;
+    }
+}
